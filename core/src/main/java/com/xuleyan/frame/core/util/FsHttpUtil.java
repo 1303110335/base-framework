@@ -300,11 +300,11 @@ public class FsHttpUtil {
 
     public static void main(String[] args) throws IOException {
         // %E4%B8%AD%E5%9B%BD
-//        System.out.println(URLEncoder.encode("中国", "UTF-8"));
+        //System.out.println(URLEncoder.encode("中国", "UTF-8"));
 
-//        testPost();
+        testPost();
 
-        testGet();
+        //testGet();
     }
 
     private static void testGet() throws IOException {

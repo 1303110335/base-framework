@@ -36,6 +36,7 @@
         <google.javase.version>3.3.0</google.javase.version>
         <validation-api.version>2.0.1.Final</validation-api.version>
         <junit.version>4.12</junit.version>
+        <apache.curator.version>2.12.0</apache.curator.version>
     </properties>
 
     <dependencies>
@@ -218,6 +219,28 @@
                     </exclusion>
                 </exclusions>
                 <optional>true</optional>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-recipes</artifactId>
+                <version>${apache.curator.version}</version>
+                <optional>true</optional>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-framework</artifactId>
+                <version>${apache.curator.version}</version>
+                <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>guava</artifactId>
+                        <groupId>com.google.guava</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
         </dependencies>
     </dependencyManagement>

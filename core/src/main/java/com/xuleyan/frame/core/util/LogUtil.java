@@ -11,7 +11,7 @@ import org.slf4j.Logger;
 /**
  * 日志工具类
  *
- * @author Liluqing
+ * @author xuleyan
  * @version LogUtils.java, v 0.1 2018-09-25 9:44
  */
 @Slf4j
