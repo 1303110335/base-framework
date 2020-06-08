@@ -5,6 +5,7 @@
 package com.xuleyan.frame.core.util;
 
 import cn.hutool.core.util.StrUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 
 /**
@@ -13,6 +14,7 @@ import org.slf4j.Logger;
  * @author Liluqing
  * @version LogUtils.java, v 0.1 2018-09-25 9:44
  */
+@Slf4j
 public class LogUtil {
 
     /**
