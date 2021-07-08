@@ -37,10 +37,10 @@
         <validation-api.version>2.0.1.Final</validation-api.version>
         <junit.version>4.12</junit.version>
         <apache.curator.version>2.12.0</apache.curator.version>
+        <redis.client.version>3.3.0</redis.client.version>
     </properties>
 
     <dependencies>
-
         <!--糊涂工具-->
         <dependency>
             <groupId>cn.hutool</groupId>
@@ -114,6 +114,12 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- redis -->
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>${redis.client.version}</version>
+            </dependency>
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>

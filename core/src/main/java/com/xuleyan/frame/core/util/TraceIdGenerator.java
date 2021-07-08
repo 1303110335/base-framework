@@ -115,7 +115,7 @@ public class TraceIdGenerator {
 
     public static void main(String[] args) {
         String inetAddress = TraceIdGenerator.getInetAddress();
-
+        System.out.println("inetAddress = " + inetAddress);
         System.out.println(getIp16(inetAddress));
 
         String processName = java.lang.management.ManagementFactory.getRuntimeMXBean().getName();

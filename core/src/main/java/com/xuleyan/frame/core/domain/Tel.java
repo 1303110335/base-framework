@@ -24,7 +24,7 @@ public class Tel {
     /**
      * Getter method for property <tt>areaCode</tt>.
      *
-     * @return property value of areaCode
+     * @return property value of areaCode aaa
      */
     public String getAreaCode() {
         return areaCode;

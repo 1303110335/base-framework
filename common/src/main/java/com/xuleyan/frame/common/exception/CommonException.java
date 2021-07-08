@@ -11,10 +11,6 @@ import com.xuleyan.frame.common.enums.CommonErrorEnum;
 import java.io.Serializable;
 import java.text.MessageFormat;
 
-/**
- * @author buhao
- * @version CommonException.java, v 0.1 2018-09-19 14:37 buhao
- */
 public class CommonException extends BaseException implements Serializable {
 
     /**

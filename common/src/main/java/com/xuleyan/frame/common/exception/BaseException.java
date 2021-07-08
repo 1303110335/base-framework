@@ -6,10 +6,6 @@ package com.xuleyan.frame.common.exception;
 
 import java.text.MessageFormat;
 
-/**
- * @author buhao
- * @version BaseException.java, v 0.1 2018-09-19 14:13 buhao
- */
 public abstract class BaseException extends RuntimeException {
     /**
      * 异常信息
