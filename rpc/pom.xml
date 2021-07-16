@@ -88,34 +88,34 @@
             </plugin>
 
             <!-- Running Allatori -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.2.1</version>
-                <executions>
-                    <execution>
-                        <id>run-allatori</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <executable>java</executable>
-                    <arguments>
-                        <argument>-Xms128m</argument>
-                        <argument>-Xmx512m</argument>
-                        <argument>-jar</argument>
+<!--            <plugin>-->
+<!--                <groupId>org.codehaus.mojo</groupId>-->
+<!--                <artifactId>exec-maven-plugin</artifactId>-->
+<!--                <version>1.2.1</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>run-allatori</id>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>exec</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--                <configuration>-->
+<!--                    <executable>java</executable>-->
+<!--                    <arguments>-->
+<!--                        <argument>-Xms128m</argument>-->
+<!--                        <argument>-Xmx512m</argument>-->
+<!--                        <argument>-jar</argument>-->
 
-                        <!-- Copy allatori.jar to 'allatori' directory to use the commented line -->
-                        <argument>${basedir}/../lib/allatori.jar</argument>
-                        <!-- <argument>${basedir}/allatori/allatori.jar</argument> -->
+<!--                        &lt;!&ndash; Copy allatori.jar to 'allatori' directory to use the commented line &ndash;&gt;-->
+<!--                        <argument>${basedir}/../lib/allatori.jar</argument>-->
+<!--                        &lt;!&ndash; <argument>${basedir}/allatori/allatori.jar</argument> &ndash;&gt;-->
 
-                        <argument>${basedir}/target/allatori.xml</argument>
-                    </arguments>
-                </configuration>
-            </plugin>
+<!--                        <argument>${basedir}/target/allatori.xml</argument>-->
+<!--                    </arguments>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 

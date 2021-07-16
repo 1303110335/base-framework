@@ -1,5 +1,5 @@
 /**
- * bianque.com
+ * xuleyan.com
  * Copyright (C) 2013-2021All Rights Reserved.
  */
 package com.xuleyan.frame.rpc.key;
@@ -14,7 +14,7 @@ import java.lang.annotation.Target;
  * @author xuleyan
  * @version RpcMethod.java, v 0.1 2021-07-08 9:22 下午
  */
-@Target({ElementType.FIELD})
+@Target({ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface RpcMethod {
 

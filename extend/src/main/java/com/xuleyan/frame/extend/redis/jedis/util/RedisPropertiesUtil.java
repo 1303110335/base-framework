@@ -19,15 +19,15 @@ public class RedisPropertiesUtil {
 
     public static RedisProperties parseConf(String filePath) throws IOException {
         Properties properties = PropertyUtils.parseProperties(filePath);
-        String type = properties.getProperty("bianque.cache.redis.type");
-        String master = properties.getProperty("bianque.cache.redis.master");
-        String password = properties.getProperty("bianque.cache.redis.password");
-        String address = properties.getProperty("bianque.cache.redis.address");
+        String type = properties.getProperty("xuleyan.cache.redis.type");
+        String master = properties.getProperty("xuleyan.cache.redis.master");
+        String password = properties.getProperty("xuleyan.cache.redis.password");
+        String address = properties.getProperty("xuleyan.cache.redis.address");
 
-        int dbIndex = getInt(properties,"bianque.cache.redis.dbIndex", 0);
-        int maxTotal = getInt(properties,"bianque.cache.redis.maxTotal", 8);
-        int maxIdle = getInt(properties,"bianque.cache.redis.maxIdle", 8);
-        int minIdle = getInt(properties,"bianque.cache.redis.minIdle", 0);
+        int dbIndex = getInt(properties,"xuleyan.cache.redis.dbIndex", 0);
+        int maxTotal = getInt(properties,"xuleyan.cache.redis.maxTotal", 8);
+        int maxIdle = getInt(properties,"xuleyan.cache.redis.maxIdle", 8);
+        int minIdle = getInt(properties,"xuleyan.cache.redis.minIdle", 0);
 
         RedisProperties redisConf = new RedisProperties();
         redisConf.setMaster(master);

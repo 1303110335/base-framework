@@ -1,5 +1,5 @@
 /**
- * bianque.com
+ * xuleyan.com
  * Copyright (C) 2013-2020 All Rights Reserved.
  */
 package com.xuleyan.frame.extend.redis.jedis.config;
@@ -28,7 +28,7 @@ import java.util.Set;
 @Configuration
 public class JedisPoolConfiguration {
 
-    @Value("${bianque.redis.conf}")
+    @Value("${xuleyan.redis.conf}")
     private String redisConf;
 
     static RedisProperties redisProperties;
@@ -36,7 +36,7 @@ public class JedisPoolConfiguration {
     @Bean(value = {"jedisPool"})
     public Object jedisPool() throws IOException {
         if (StringUtils.isEmpty(redisConf)) {
-            throw new IllegalArgumentException("缺少配置: bianque.redis.conf=redis-xxx.properties");
+            throw new IllegalArgumentException("缺少配置: xuleyanredis.conf=redis-xxx.properties");
         }
         redisProperties = RedisPropertiesUtil.parseConf(redisConf);
         if (redisProperties.getNodes() == null) {

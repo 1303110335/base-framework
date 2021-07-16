@@ -1,5 +1,5 @@
 /**
- * bianque.com
+ * xuleyan.com
  * Copyright (C) 2013-2020 All Rights Reserved.
  */
 package com.xuleyan.frame.web.bean;
