@@ -19,6 +19,11 @@ public interface DistributedLock {
 
     /**
      * 在指定时间内尝试获取锁
+     * zookeeper 尝试获取锁，首先获取可重入锁对象，然后尝试获取锁，
+     * 若当前线程已获取该锁，则将该锁的lockCount + 1并返回获取锁成功
+     * 若不是当前线程，则首先在/mylock目录下创建一个临时顺序节点，然后获取该目录下的所有临时节点，
+     *  判断当前节点是否获取到锁（即是否是最小的节点），若是则返回获取锁成功，若不是则创建一个watcher监听它的上一个节点，
+     *  若直到有效时间截止还没获取到锁则失败，否则成功
      * @param lockKey 锁的key
      */
     boolean tryLock(String lockKey, long timeout) throws Exception;

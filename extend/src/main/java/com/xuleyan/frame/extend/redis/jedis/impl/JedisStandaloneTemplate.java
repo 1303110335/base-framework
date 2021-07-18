@@ -587,4 +587,14 @@ public class JedisStandaloneTemplate implements JedisTemplate {
         }
     }
 
+    @Override
+    public Object eval(String script, List<String> keys, List<String> params) {
+        Jedis jedis = jedisPool.getResource();
+        try {
+            return jedis.eval(script, keys, params);
+        } finally {
+            jedis.close();
+        }
+    }
+
 }

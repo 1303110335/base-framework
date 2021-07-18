@@ -241,4 +241,6 @@ public interface JedisTemplate {
     List<String> lrange(String lkey, long start, long stop);
 
     long lrem(String lkey, long count, String value);
+
+    Object eval(String script, List<String> keys, List<String> args);
 }

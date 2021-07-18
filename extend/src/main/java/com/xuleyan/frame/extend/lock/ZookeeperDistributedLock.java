@@ -101,13 +101,15 @@ public class ZookeeperDistributedLock implements DistributedLock {
         long currentTime = System.currentTimeMillis();
         try {
             InterProcessMutex lock = getInterProcessMutex(lockPath);
-            lock.acquire(timeout, TimeUnit.MILLISECONDS);
-            LogUtil.info(log, "【分布式锁服务】tryLock-获取到分布式锁成功! 耗时={}ms, lockPath={}", System.currentTimeMillis() - currentTime, lockPath);
+            boolean acquire = lock.acquire(timeout, TimeUnit.MILLISECONDS);
+            String flag = acquire ? "成功" : "失败";
+            LogUtil.info(log, "【分布式锁服务】tryLock-获取到分布式锁{}! 耗时={}ms, lockPath={}",
+                    flag, System.currentTimeMillis() - currentTime, lockPath);
+            return acquire;
         } catch (Exception e) {
             LogUtil.error(log, "【分布式锁服务】lock-获取分布式锁失败!lockPath = {}", lockPath, e);
-            throw new Exception("【分布式锁服务】lock-获取分布式锁失败! lockPath = " + lockPath);
+            return false;
         }
-        return true;
     }
 
     @Override
@@ -117,8 +119,8 @@ public class ZookeeperDistributedLock implements DistributedLock {
             InterProcessMutex lock = getInterProcessMutex(lockPath);
             lock.release();
         } catch (Exception e) {
-            LogUtil.error(log, "【分布式服务】unlock-分布式锁解锁失败！lockPath = {}", lockPath, e);
-            throw new Exception("【分布式服务】unlock-分布式锁解锁失败");
+            LogUtil.warn(log, "【分布式服务】unlock-分布式锁解锁失败！lockPath = {}", lockPath);
+            //throw new Exception("【分布式服务】unlock-分布式锁解锁失败");
         }
     }
 }

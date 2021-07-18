@@ -589,4 +589,14 @@ public class JedisSentinelTemplate implements JedisTemplate {
     public void setJedisPool(JedisSentinelPool jedisPool) {
         this.jedisPool = jedisPool;
     }
+
+    @Override
+    public Object eval(String script, List<String> keys, List<String> params) {
+        Jedis jedis = jedisPool.getResource();
+        try {
+            return jedis.eval(script, keys, params);
+        } finally {
+            jedis.close();
+        }
+    }
 }

@@ -19,11 +19,7 @@ public class JedisClusterTemplate implements JedisTemplate {
 
     @Override
     public void destroy() {
-//        try {
-//            jedisCluster.close();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        jedisCluster.close();
     }
 
     @Override
@@ -324,5 +320,10 @@ public class JedisClusterTemplate implements JedisTemplate {
     @Override
     public long lrem(String lkey, long count, String value) {
         return jedisCluster.lrem(lkey, count, value);
+    }
+
+    @Override
+    public Object eval(String script, List<String> keys, List<String> params) {
+        return jedisCluster.eval(script, keys, params);
     }
 }
