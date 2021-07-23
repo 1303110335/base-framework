@@ -12,6 +12,8 @@ import com.xuleyan.frame.mask.filter.MaskValueFilter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.MethodParameter;
+import org.springframework.core.Ordered;
+import org.springframework.core.annotation.Order;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.server.ServerHttpRequest;
@@ -30,6 +32,7 @@ import java.util.Map;
  */
 @ControllerAdvice
 @Slf4j
+@Order(Ordered.HIGHEST_PRECEDENCE)
 public class MaskResponseBodyAdvise implements ResponseBodyAdvice<String> {
 
     @Value("${masking.field}")
@@ -65,6 +68,7 @@ public class MaskResponseBodyAdvise implements ResponseBodyAdvice<String> {
     public String beforeBodyWrite(String body, MethodParameter methodParameter, MediaType selectedContentType, Class<? extends HttpMessageConverter<?>> selectedConverterType, ServerHttpRequest request, ServerHttpResponse response) {
         Object bodyObject = JSON.parse(body);
         // [{"id":1,"name":"xly"}]
+        log.info("对返回值脱敏...");
         String result = JSON.toJSONString(bodyObject, new MaskValueFilter(fieldAndRules), SerializerFeature.WriteMapNullValue);
         return result;
     }

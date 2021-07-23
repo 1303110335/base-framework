@@ -15,6 +15,7 @@
         <module>web</module>
         <module>rpc</module>
         <module>mask</module>
+        <module>tracer</module>
     </modules>
 
     <properties>
