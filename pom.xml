@@ -27,7 +27,7 @@
         <dubbo.version>2.6.2</dubbo.version>
         <hutool.version>4.1.14</hutool.version>
         <commons-lang3.version>3.7</commons-lang3.version>
-        <zookeeper.version>3.4.13</zookeeper.version>
+        <zookeeper.version>3.6.2</zookeeper.version>
         <spring.version>5.1.14.RELEASE</spring.version>
         <javax.servlet.version>3.1.0</javax.servlet.version>
         <slf4j.version>1.7.25</slf4j.version>
@@ -35,10 +35,10 @@
         <projectlombok.version>1.18.2</projectlombok.version>
         <dubbo.spring.version>0.2.0</dubbo.spring.version>
         <fastjson.version>1.2.60</fastjson.version>
-        <guava.version>21.0</guava.version>
+        <guava.version>30.1.1-jre</guava.version>
         <google.javase.version>3.3.0</google.javase.version>
         <validation-api.version>2.0.1.Final</validation-api.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <apache.curator.version>2.12.0</apache.curator.version>
         <redis.client.version>3.3.0</redis.client.version>
         <springframework.version>5.2.6.RELEASE</springframework.version>
