@@ -16,8 +16,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @author buhao
- * @version ApiDescriptor.java, v 0.1 2018-06-08 17:52 buhao
+ * @author xuleyan
+ * @version ApiDescriptor.java, v 0.1 2018-06-08 17:52 xuleyan
  */
 public class ApiDescriptor {
     /**

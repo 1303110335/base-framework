@@ -1,0 +1,1 @@
+dubboTracerFilter=com.alijk.bqcommon.tracer.core.filter.DubboTracerFilter

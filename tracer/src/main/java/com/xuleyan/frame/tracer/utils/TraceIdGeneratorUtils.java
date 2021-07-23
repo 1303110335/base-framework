@@ -22,6 +22,10 @@ public class TraceIdGeneratorUtils {
 
     public static String getTraceId(HttpServletRequest request) {
         String netIp = IpUtils.getNetIpAddr(request);
+        return getTraceId(netIp);
+    }
+
+    public static String getTraceId(String netIp) {
         return getTraceId(getIP_16(null == netIp ? IP_16 : netIp), Clock.systemUTC().millis(), getNextId());
     }
 
@@ -59,5 +63,9 @@ public class TraceIdGeneratorUtils {
 
         }
         return sb.toString();
+    }
+
+    public static String generate() {
+        return getTraceId(IP_16, Clock.systemUTC().millis(), getNextId());
     }
 }

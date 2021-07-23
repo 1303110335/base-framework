@@ -22,8 +22,8 @@ import static com.google.common.collect.Iterables.getFirst;
 /**
  * 参数校验，根据参数上的注解
  *
- * @author buhao
- * @version ValidateUtil.java, v 0.1 2018-06-08 14:50 buhao
+ * @author xuleyan
+ * @version ValidateUtil.java, v 0.1 2018-06-08 14:50 xuleyan
  */
 public class ValidateUtil {
     private static final Validator VALIDATOR = Validation.buildDefaultValidatorFactory().getValidator();

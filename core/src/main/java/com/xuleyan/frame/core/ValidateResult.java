@@ -6,8 +6,8 @@ package com.xuleyan.frame.core;
 
 /**
  * 校验结果
- * @author buhao
- * @version ValidateResult.java, v 0.1 2018-08-28 23:37 buhao
+ * @author xuleyan
+ * @version ValidateResult.java, v 0.1 2018-08-28 23:37 xuleyan
  */
 public class ValidateResult {
     private boolean result;

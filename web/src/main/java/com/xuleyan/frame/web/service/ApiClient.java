@@ -29,8 +29,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.text.MessageFormat;
 
 /**
- * @author buhao
- * @version ApiClient.java, v 0.1 2018-06-08 14:50 buhao
+ * @author xuleyan
+ * @version ApiClient.java, v 0.1 2018-06-08 14:50 xuleyan
  */
 @Component
 @Slf4j
