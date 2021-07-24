@@ -1,1 +1,1 @@
-dubboTracerFilter=com.alijk.bqcommon.tracer.core.filter.DubboTracerFilter
+dubboTracerFilter=com.xuleyan.frame.tracer.filter.DubboTracerFilter
