@@ -4,6 +4,7 @@
  */
 package com.xuleyan.frame.common.util;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.time.DateFormatUtils;
 
 import java.util.Date;
@@ -14,6 +15,7 @@ import java.util.Date;
  * 雪花算法
  * @version BQSnowFlake.java, v 0.1 2021-07-17 3:37 下午
  */
+@Slf4j
 public class BQSnowFlake {
 
     /**
@@ -108,9 +110,22 @@ public class BQSnowFlake {
         lastStmp = currStmp;
         String time = DateFormatUtils.format(new Date(), pattern);
 
-        return time + ((currStmp - START_STMP) << TIMESTMP_LEFT //时间戳部分
-                | datacenterId << DATACENTER_LEFT       //数据中心部分
-                | machineId << MACHINE_LEFT             //机器标识部分
+        System.out.println("time = " + time);
+        long timestamp = (currStmp - START_STMP) << TIMESTMP_LEFT;
+        System.out.println("timestamp ="+ timestamp);
+
+        long dataCenterId = datacenterId << DATACENTER_LEFT;
+        System.out.println("dataCenterId = "+ dataCenterId);
+
+        long machineCenterId = machineId << MACHINE_LEFT;
+        System.out.println("machineCenterId = "+ machineCenterId);
+
+        System.out.println("sequence = "+ sequence);
+
+        return time + (
+                timestamp //时间戳部分
+                | dataCenterId       //数据中心部分
+                | machineCenterId             //机器标识部分
                 | sequence);                  //序列号部分
     }
 

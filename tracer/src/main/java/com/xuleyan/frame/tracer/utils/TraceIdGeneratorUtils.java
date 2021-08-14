@@ -31,7 +31,7 @@ public class TraceIdGeneratorUtils {
 
     private static String getTraceId(String ip, long timestamp, int nextId) {
         StringBuilder appender = new StringBuilder(32);
-        StringBuilder result = appender.append(ip).append(timestamp).append(nextId).append(RuntimeUtils.getPid());
+        StringBuilder result = appender.append(RuntimeUtils.getPid()).append(ip).append(timestamp).append(nextId);
         return result.toString();
     }
 
