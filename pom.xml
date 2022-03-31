@@ -25,7 +25,7 @@
         <hutool.version>4.1.14</hutool.version>
         <commons-lang3.version>3.7</commons-lang3.version>
         <zookeeper.version>3.6.2</zookeeper.version>
-        <spring.version>5.1.14.RELEASE</spring.version>
+        <spring.version>5.3.18</spring.version>
         <javax.servlet.version>3.1.0</javax.servlet.version>
         <slf4j.version>1.7.25</slf4j.version>
         <log4j2.version>2.11.1</log4j2.version>
